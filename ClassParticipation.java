@@ -1,7 +1,5 @@
 public class ClassParticipation {
-   /**
-   The Node class stores a list element and a reference to the next node.
-   */
+   
 
    private class Node
    {
@@ -9,22 +7,13 @@ public class ClassParticipation {
        int count;
        Node next;
 
-       /**
-           Constructor.
-   @param val element to store in the node.
-   @param n reference to the successor node.
-       */
-   // constructor with attributes given as arguments
        Node(String val, Node n)
        {
            value=val;
            next=n;
        }
 
-       /**
-       Constructor.
-       @param val element to store in the node.
-       */
+    
 
        Node(String val)
        {
@@ -33,12 +22,10 @@ public class ClassParticipation {
        }
    }
 
-   private Node first; // list head
-   private Node last; // last element in list
+   private Node first; 
+   private Node last; 
 
-   /**
-   Constructor.
-   */
+
 
    public ClassParticipation()
    {
@@ -46,22 +33,14 @@ public class ClassParticipation {
        last = null;
    }
 
-   /**
-       The isEmpty method checks to see
-   if the list is empty.
-   @return true if list is empty,
-   false otherwise.
-   */
+ 
 
    public boolean isEmpty()
    {
        return size()==0;
    }
 
-   /**
-   The size method returns the length of the list.
-   @return The number of elements in the list.
-   */
+ 
 
    public int size()
    {
@@ -75,12 +54,7 @@ public class ClassParticipation {
        return count;
    }
 
-   /**
-   The add method adds an element to
-   the end of the list.
-   @param e The value to add to the
-   end of the list.
-   */
+
 
    public void add(String e)
    {
@@ -106,26 +80,10 @@ public class ClassParticipation {
        }
    }
 
-   /**
-   The add method adds an element at a position.
-   @param e The element to add to the list.
-   @param index The position at which to add
-   the element.
-   @exception IndexOutOfBoundsException When
-   index is out of bounds.
-   */
 
    public void add(int index, String e)
    {
-   //*** Task #4: fill in the body of this method, following instructions given by comments
-   /*
-   Directions :
-   * check that index is in the correct range, and throw IndexOutOfBoundsException if not
-   * consider index is 0, and place the new element in the beginning of the list
-   * set a reference pred to point to the node that will be the predecessor of the new node
-   * Splice in a node containing the new element
-   * check if there is a new last element, and set up last
-   */
+
        if(index<0 || index>size())
            throw new IndexOutOfBoundsException("Index out of bound.");
        if(isInTheList(e))
@@ -170,11 +128,7 @@ public class ClassParticipation {
        }
        return false;
    }
-   /**
-   The toString method computes the string
-   representation of the list.
-   @return The string form of the list.
-   */
+
 
    public String toString()
    {
@@ -190,11 +144,5 @@ public class ClassParticipation {
        return strBuilder.toString();
    }
 
-   /**
-   The remove method removes the element at an index.
-   @param index The index of the element to remove.
-   @return The element removed.
-   @exception IndexOutOfBoundsException When index is
-   out of bounds.
-   */
+   
 }
